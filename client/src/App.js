@@ -2,6 +2,7 @@ import { Profiler } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About"
+import Login from "./pages/Login"
 import Search from "./pages/Search";
 import SingleRecipe from "./pages/SingleRecipe";
 import Profile from "./pages/Profile";
@@ -19,10 +20,10 @@ const App = () => {
     <BrowserRouter>
       <Navbar/>
         <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="about" element={ <About/> } />
-          <Route path="search" element={ <Search /> } />
+          <Route path="/" element={ <Search /> } />
           <Route path="search/detail" element={ <SingleRecipe/> } />
+          <Route path="login" element={ <Login/> } />
+          <Route path="about" element={ <About/> } />
           <Route path="profile" element={ <Profile /> } />
           <Route path="profile/recipe" element={ <ProfileRecipe/> } />
           <Route path="profile/recipe/add" element={ <AddRecipe/> } />
