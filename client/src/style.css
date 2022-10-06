@@ -83,6 +83,7 @@ Variables
     background: transparent;
     border-radius: var(--mainBorderRadius);
     display: inline-block;
+    margin-top: 50px;
   }
   .btn:hover {
     background: var(--primaryColor);
@@ -115,6 +116,10 @@ Variables
   }
   .btn-details {
     padding: 0.25rem 0.4rem;
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+    transform: translateX(-50%);
   }
   .btn-details:hover {
     background: var(--primaryLightColor);
@@ -224,6 +229,9 @@ Variables
     display: grid;
     grid-template-rows: auto 1fr;
     border-radius: var(--mainBorderRadius);
+    width: 100%;
+    height: 100%;
+
   }
   .recipe:hover {
     box-shadow: var(--darkShadow);
@@ -236,6 +244,7 @@ Variables
   }
   .recipe-footer {
     padding: 1.5rem;
+    position: relative;
   }
   .recipe-footer h3,
   .recipe-footer h4,
@@ -252,8 +261,22 @@ Variables
   /* 
   Search
   */
+  .app{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
   .search {
-    margin-top: 1rem;
+    margin-top: 5rem;
     padding-bottom: 0;
   }
   
@@ -271,6 +294,7 @@ Variables
   .form-control label {
     display: block;
     margin-bottom: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.25rem;
     color: var(--primaryColor);
@@ -284,6 +308,7 @@ Variables
     padding: 0.5rem;
     font-size: 1.2rem;
   }
+
   /* 
   ====== 
   Recipe

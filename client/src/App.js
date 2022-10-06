@@ -18,10 +18,10 @@ const App = () => {
 
   return(
     <BrowserRouter>
-      <Navbar/>
+      <Navbar/> 
         <Routes>
           <Route path="/" element={ <Search /> } />
-          <Route path="search/detail" element={ <SingleRecipe/> } />
+          <Route path="search/:id" element={ <SingleRecipe/> } />
           <Route path="login" element={ <Login/> } />
           <Route path="about" element={ <About/> } />
           <Route path="profile" element={ <Profile /> } />
@@ -29,7 +29,7 @@ const App = () => {
           <Route path="profile/recipe/add" element={ <AddRecipe/> } />
           <Route path="*" element={ <Error/> } />
         </Routes>
-      <Footer/>
+  {/*     <Footer/> */}
     </BrowserRouter>
   )
 }
