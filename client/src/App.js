@@ -25,8 +25,8 @@ const App = () => {
           <Route path="login" element={ <Login/> } />
           <Route path="about" element={ <About/> } />
           <Route path="profile" element={ <Profile /> } />
-          <Route path="profile/recipe" element={ <ProfileRecipe/> } />
-          <Route path="profile/recipe/add" element={ <AddRecipe/> } />
+          <Route path="profile/:recipe" element={ <ProfileRecipe/> } />
+          <Route path="profile/:recipe/:add" element={ <AddRecipe/> } />
           <Route path="*" element={ <Error/> } />
         </Routes>
   {/*     <Footer/> */}

@@ -15,6 +15,7 @@ function Search() {
    // console.log(response)
     const data = await response.json();
     setMyRecipes(data.hits)
+    console.log(data.hits)
   }
 
   const[mySearch, setMySearch] = useState('');
@@ -48,7 +49,7 @@ function Search() {
         <form className='search-form' onSubmit={finalSearch}>
           <div className="form-control">
             <label htmlFor="name">
-              search your favorite meal
+              find something to cook
             </label> 
           <input placeholder="Search" onChange={myRecipeSearch} value={mySearch}>
           </input>
@@ -63,6 +64,7 @@ function Search() {
           image={element.recipe.image}
           calories={element.recipe.calories}
           ingredients = {element.recipe.ingredientLines}
+          id = {element.recipe.id}
       />
     ))}
         </div>
