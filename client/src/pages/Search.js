@@ -1,8 +1,5 @@
-//import './App.css';
 import { useEffect, useState  } from "react";
 import video from './food.mp4'
-//import MyRecipesComponent from './MyRecipesComponent';
-//import { FaSearch } from 'react-icons/fa';
 import MyRecipesComponent from "./MyRecipesComponent";
 
 function Search() {

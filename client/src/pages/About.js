@@ -1,7 +1,12 @@
+import { LoremIpsum } from "react-lorem-ipsum";
+
 const About = () => {
-    return(
-        <h1>About content here</h1>
-    )
+  return (
+    <section className='section about-section'>
+      <h2 className='section-title'>about us</h2>
+      <p><LoremIpsum/></p>
+    </section>
+  )
 }
 
-export default About;
+export default About
