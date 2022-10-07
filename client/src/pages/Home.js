@@ -1,12 +1,12 @@
-import React from 'react'
+import About from "../components/About"
 
 
 const Home = () => {
   return (
-    <main>
+    <div>
         <h1>Home Page</h1>
-
-    </main>
+        <About/>
+    </div>
   )
 }
 
