@@ -13,14 +13,14 @@ const RecipeList = () => {
   if(recipes.length < 1 ){
     return(
       <h2 className='section-title'>
-      no cocktails matched your search criteria
+      no recipes matched your search criteria
     </h2>
     )
 }
 
   return (
     <section className='section'>
-      <h2 className='section-title'>recipes</h2>
+      <h2 className='section-title'>most popular recipes</h2>
       <div className='recipes-center'>
         {recipes.map((item) => {
           return <Recipe key={item.id} {...item}/>

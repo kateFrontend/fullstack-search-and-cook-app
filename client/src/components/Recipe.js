@@ -11,7 +11,7 @@ const Recipe = ({image, name, id, category, cuisine}) => {
         <h3>{name}</h3>
         <h4>{category}</h4>
         <p>{cuisine}</p>
-        <Link to={`/recipe/${id}`} className='btn btn-primary btn-details'>
+        <Link to={`/search/${id}`} className='btn btn-primary btn-details'>
           details
         </Link>
       </div>

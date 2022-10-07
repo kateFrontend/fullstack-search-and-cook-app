@@ -20,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="search" element={ <Search/> } />
+          <Route path="search/:id" element={ <SingleRecipe/> } />
           <Route path="login" element={ <Login/> } />
           <Route path="profile" element={ <Profile /> } />
           <Route path="profile/:recipe" element={ <ProfileRecipe/> } />
