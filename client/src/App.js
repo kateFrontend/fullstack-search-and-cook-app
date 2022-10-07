@@ -1,4 +1,3 @@
-import { Profiler } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About"
@@ -20,8 +19,8 @@ const App = () => {
     <BrowserRouter>
       <Navbar/> 
         <Routes>
-          <Route path="/" element={ <Search /> } />
-          <Route path="search/:id" element={ <SingleRecipe/> } />
+          <Route path="/" element={ <Home /> } />
+          <Route path="search" element={ <Search/> } />
           <Route path="login" element={ <Login/> } />
           <Route path="about" element={ <About/> } />
           <Route path="profile" element={ <Profile /> } />
