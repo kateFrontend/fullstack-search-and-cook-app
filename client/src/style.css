@@ -415,3 +415,22 @@ Variables
       height: 5em;
     }
   }
+
+  .App{
+    padding-bottom: 50px;
+  }
+
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
