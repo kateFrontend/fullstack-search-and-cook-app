@@ -1,4 +1,4 @@
-import { db } from '../firebase.config'
+/* import { db } from '../firebase.config'
 import '../addrecipe.css'
 import { useState, useEffect } from "react"
 import {
@@ -216,4 +216,4 @@ return (
 
 }
 
-export default AddRecipe;
+export default AddRecipe; */
