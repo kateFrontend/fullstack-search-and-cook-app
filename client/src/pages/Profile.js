@@ -1,6 +1,12 @@
+import AddRecipeForm from "../components/AddRecipeForm";
+
 const Profile = () => {
     return(
-        <h1>Profile content here</h1>
+        <div>
+            <h1>Add new recipe here</h1>
+            <AddRecipeForm/>
+        </div>
+        
     )
 }
 

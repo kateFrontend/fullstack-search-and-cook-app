@@ -8,6 +8,9 @@ const Navbar = () => {
               <h2 className='logo'>Search&Cook</h2>
             </Link>
             <ul className='nav-links'>
+            <li>
+                <Link to='/addrecipe'>Add Recipe</Link>
+              </li>
               <li>
                 <Link to='/search'>Search</Link>
               </li>

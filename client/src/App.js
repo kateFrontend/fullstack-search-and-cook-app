@@ -9,6 +9,7 @@ import AddRecipe from "./pages/AddRecipe"
 import Error from './pages/Error'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BuyAndCook from "./pages/BuyAndCook";
 
 
 
@@ -23,8 +24,9 @@ const App = () => {
           <Route path="search/:id" element={ <SingleRecipe/> } />
           <Route path="login" element={ <Login/> } />
           <Route path="profile" element={ <Profile /> } />
+          <Route path="buy" element={ <BuyAndCook/> } />
           <Route path="profile/:recipe" element={ <ProfileRecipe/> } />
-          <Route path="profile/:recipe/:add" element={ <AddRecipe/> } />
+          <Route path="addrecipe" element={ <AddRecipe/> } />
           <Route path="*" element={ <Error/> } />
         </Routes>
   {/*     <Footer/> */}
