@@ -44,9 +44,9 @@ align-items: center;
 
   .btn {
   text-transform: uppercase;
-  background: hsl(185, 62%, 45%);
-  color: hsl(186, 100%, 94%);
-  padding: 0.375rem 0.75rem;
+  background: green;
+  color: #fff;
+  padding: 1rem 0.75rem;
   letter-spacing:  0.1rem;
   display: inline-block;
   font-weight: 400;
@@ -58,7 +58,7 @@ align-items: center;
   border-radius: 0.25rem;
 }
 .btn:hover {
-  background: hsl(184, 80%, 74%);
-  color: hsl(185, 91%, 17%);
+  background: lightgreen;
+  color: green;
 }
 `;

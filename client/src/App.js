@@ -10,16 +10,20 @@ import Error from './pages/Error'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BuyAndCook from "./pages/BuyAndCook";
+import PrivateRoute from './pages/PrivateRoute';
+import AuthWrapper from "./pages/AuthWrapper";
+
 
 
 
 const App = () => {
 
   return(
+    <AuthWrapper>
     <BrowserRouter>
       <Navbar/> 
         <Routes>
-          <Route path="/" element={ <Home /> } />
+          <Route path="/" element={ <PrivateRoute><Home /></PrivateRoute> } />
           <Route path="search" element={ <Search/> } />
           <Route path="search/:id" element={ <SingleRecipe/> } />
           <Route path="login" element={ <Login/> } />
@@ -31,6 +35,7 @@ const App = () => {
         </Routes>
   {/*     <Footer/> */}
     </BrowserRouter>
+    </AuthWrapper>
   )
 }
 export default App;
