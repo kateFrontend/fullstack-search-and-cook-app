@@ -1,39 +1,53 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
 function AddRecipeForm() {
+/* 
+  const [formData, setFormData] = useState({
+    title:'',
+    description:'',
+    ingredients:'',
+    instructions:''
+  })
+
+  const { title, description, ingredients, instructions } = formData; */
+
+/*   onchange()
+
+  onsubmit() */
+
   return (
 
     <>
     <div>
 
-<Form action="/submit-recipe" method="post">
+<Form>
 
 {/*  add image  */}
 
   <div>
-    <label for="recipeImage">Recipe Title:</label>
-    <input type="text" name="recipeTitle" placeholder="Nachos"/>
+    <label for="title">Recipe Title:</label>
+    <input type="text" name="title" placeholder="Add a recipe name"/>
   </div>
 
-{/* add title */}
 
-  <div>
+{/*   <div>
     <label for="addRecipeTitle">Recipe Image:</label>
     <input type="text" name="recipeImage" placeholder="'http://..."/>
-  </div>
+  </div> */}
 
 {/* add description  */}
   <div class="form-group">
     <label for="addRecipeDescription">Description:</label>
-    <textarea name="recipeDesc" rows="3"></textarea>
+    <textarea name="description" rows="3"></textarea>
   </div>
 
 
 {/*  ingredients  */}
 <div>
-    <label for="addRecipeIngredients">Ingredients:</label>
-    <div>
+    <label for="lineForAddedIngredient">Ingredients:</label>
+{/*     <div>
       <select id="addRecipeMeasurement">
         <option>1/8</option>
         <option>1/4</option>
@@ -53,8 +67,8 @@ function AddRecipeForm() {
       </select>
       <input type="input" id="ingredientInputBox" placeholder="'ie: butter'"/>
       <input id="addIngredientBttn" type="submit" value="+"/>
-    </div> 
-    <textarea id="lineForAddedIngredient" name="recipeIngredients" rows="3" readonly></textarea>      
+    </div>  */}
+    <textarea id="lineForAddedIngredient" name="ingredients" rows="3" readonly></textarea>      
 </div>
 
   

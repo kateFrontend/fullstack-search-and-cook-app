@@ -1,0 +1,16 @@
+[
+    {
+        "id":"01",
+        "name": "tasty potatoes",
+        "description": "The most delicious potatoes ever!",
+        "ingredients": "Potatoes, olive oil, garlic",
+        "instructions": " Wash The Potatoes And Cut Medium Dice Into Square Pieces. To Prevent Any Browning, Place The Already Cut Potatoes In A Bowl Filled With Water. In The Meantime, Heat 1-2 Tablespoons Of Oil In A Large Skillet Over Medium-High Heat. Tilt The Skillet So The Oil Spreads Evenly. Once The Oil Is Hot, Drain The Potatoes And Add To The Skillet. Season With Salt, Pepper, And Old Bay As Needed. Cook For 10 Minutes, Stirring The Potatoes Often, Until Brown. "
+    },
+    {
+        "id":"02",
+        "name": "tomato sauce",
+        "description": "Tomato sauce is the base sauce for many recipes ",
+        "ingredients": "Tomatoes, olive oil, garlic, salt, peper",
+        "instructions": "Heat the oil in a wok or heavy frying pan over medium-high heat. When the oil starts to shimmer, add the garlic and saute until golden. Do not let it burn or it will become bitter. If you like a spicy sauce, add the pepper. Add the tomatoes and saute. There will be a lot of spitting and hissing as the wet tomatoes hit the hot oil. Turn the heat to medium-low, add the sugar if using, and cook the tomatoes down until they are reduced by about half and have taken on a more orangey hue. Adjust the seasoning by adding salt to taste. If the sauce looks like it's drying out too much, add a little water. At this point, if not using immediately, stop cooking, cool, and freeze the sauce for later use. Add the Parmesan, taste for seasoning, then serve."
+    }
+]
