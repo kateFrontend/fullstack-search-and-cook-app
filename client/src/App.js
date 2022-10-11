@@ -13,9 +13,6 @@ import BuyAndCook from "./pages/BuyAndCook";
 import PrivateRoute from './pages/PrivateRoute';
 import AuthWrapper from "./pages/AuthWrapper";
 
-
-
-
 const App = () => {
 
   return(
