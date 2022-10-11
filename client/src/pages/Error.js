@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
+import image from './error.png'
+import styled from 'styled-components'
 
 const Error = () => {
   return (
     <section className='error-page section'>
       <div className='error-container'>
+        <Img src={image} alt='error'/>
         <h1>oops! nothing interesting here</h1>
         <Link to='/' className='btn btn-primary'>
             back home
@@ -12,5 +15,9 @@ const Error = () => {
     </section>
   )
 }
+
+const Img = styled.img`
+width: 500px;
+`
 
 export default Error
