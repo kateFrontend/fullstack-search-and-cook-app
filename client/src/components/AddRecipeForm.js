@@ -1,3 +1,7 @@
+// This section is not finished yet!
+// Backend is done. Need to connect with frontend. 
+// I do everything myself and will add comments to everything!
+
 import React from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components'
