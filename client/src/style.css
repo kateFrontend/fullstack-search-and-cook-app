@@ -55,6 +55,7 @@ Variables
   p {
     margin-bottom: 1rem;
   }
+
   ul {
     list-style-type: none;
   }
@@ -197,7 +198,16 @@ Variables
   .about-title:hover{
     transform: scale(1.1);
     transition: var(--mainTransition);
+    cursor: pointer;
   }
+
+  .par-about:hover{
+    transform: scale(1.1);
+    transition: var(--mainTransition);
+    cursor: pointer;
+  }
+
+
 
   .img-about{
     border-radius:2rem;
@@ -209,6 +219,12 @@ Variables
   .img-about:hover{
     transform: scale(1.2);
     transition: var(--mainTransition);
+  }
+
+  .serv-section{
+    width: var(--fullWidth);
+    max-width: var(--fullWidth);
+    margin: 0 auto;
   }
   /* 
   Error
@@ -297,15 +313,6 @@ Variables
     background-color: rgba(255, 255, 255, 0.5);
   }
 
-  video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
 
   .search {
     margin-top: 5rem;
@@ -472,14 +479,22 @@ Variables
     height: 300px;
     background-color:#476a2e;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    margin-bottom: 5rem;
+  }
+
+  .element:hover{
+    transform: scale(1.1);
+    transition: var(--mainTransition);
   }
 
   .el-title{
     color: white;
-    font-size: 28px;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
 
   .el-descr{
@@ -488,11 +503,24 @@ Variables
   }
 
   .el-section{
-    margin: 0 15%;
+    margin-top: 8rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: var(--fullWidth);
+    max-width: var(--fullWidth);
   }
 
+  .icons {
+    font-size:3rem;
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+  }
+
+
+  .big{
+    font-size: 4rem;
+  }
 /* ///////////////////////////////////////////////// */
 
 .App {

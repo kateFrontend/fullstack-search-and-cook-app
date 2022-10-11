@@ -1,3 +1,24 @@
+import AddRecipeForm from "../components/AddRecipeForm";
+
+const AddRecipe = () => {
+    return(
+        <div>
+            <h1>Add new recipe here</h1>
+            <AddRecipeForm/>
+        </div>
+        
+    )
+}
+
+export default AddRecipe;
+
+
+
+
+
+
+
+
 /* import { db } from '../firebase.config'
 import '../addrecipe.css'
 import { useState, useEffect } from "react"
