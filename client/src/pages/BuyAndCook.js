@@ -100,13 +100,13 @@ const Section = styled.div`
 padding: 5rem 0;
 width: 100vw;
 margin: 0 auto;
-max-width: 50rem;
+max-width: 80rem;
 margin-top: 8rem;
-background: #fff;
-  border-radius: 0.5rem;
-  box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s linear;;
-  padding: 2rem;
+border-radius: 0.5rem;
+background-color: #fff;
+box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s linear;;
+padding: 2rem;
 
   &:hover{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -116,10 +116,10 @@ background: #fff;
 const BuyForm = styled.form`
 
 h3{
-    color: green;
+    color: var(--primaryColor);
     margin-bottom: 1.5rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 `
@@ -127,6 +127,7 @@ h3{
 const FormControl = styled.div`
   display: flex;
   justify-content: center;
+
 
   input{
 padding: 1rem;
@@ -139,7 +140,7 @@ font-size: 1.2rem;
 
 const SubmitButton = styled.button`
 margin-left: 1rem;
-  background: green;
+  background: var(--primaryColor);
   color: white;
   border: none;
   flex: 0 0 10rem;
@@ -149,7 +150,7 @@ margin-left: 1rem;
   letter-spacing: 2px;
   border-radius: 0.5rem;
   cursor: pointer;
-  content: green;
+  content: var(--primaryColor);
   transition: all 0.3s linear;
   font-size: 1.2rem;
   font-size: bold;
@@ -167,7 +168,7 @@ const ClearButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: red;
+  background: var(--mainRed);
   border-color: none;
   color: #fff;
   border-radius: 0.5rem;

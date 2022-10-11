@@ -9,7 +9,8 @@ const port = 8000;
 
 express()
 
-    .use(express.urlencoded({ extended: true} ))
+/*     .use(express.urlencoded({ extended: true} )) */
+    .use(express.json())
     .use(helmet())
     .use(morgan('tiny'))
     

@@ -27,9 +27,9 @@ const App = () => {
           <Route path="search" element={ <Search/> } />
           <Route path="search/:id" element={ <SingleRecipe/> } />
           <Route path="login" element={ <Login/> } />
-          <Route path="profile" element={ <Profile /> } />
+{/*           <Route path="profile" element={ <Profile /> } /> */}
           <Route path="buy" element={ <BuyAndCook/> } />
-          <Route path="profile/:recipe" element={ <ProfileRecipe/> } />
+{/*           <Route path="profile/:recipe" element={ <ProfileRecipe/> } /> */}
           <Route path="addrecipe" element={ <AddRecipe/> } />
           <Route path="*" element={ <Error/> } />
         </Routes>

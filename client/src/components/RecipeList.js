@@ -20,7 +20,7 @@ const RecipeList = () => {
 
   return (
     <section className='section'>
-      <h2 className='section-title'>most popular recipes</h2>
+      <h1 className='section-title'>most popular recipes</h1>
       <div className='recipes-center'>
         {recipes.map((item) => {
           return <Recipe key={item.id} {...item}/>

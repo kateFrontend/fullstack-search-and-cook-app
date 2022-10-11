@@ -141,7 +141,7 @@ Variables
   */
   .navbar {
     background: var(--mainWhite);
-    height: 5rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     border-bottom: 2px solid var(--primaryColor);
@@ -615,30 +615,28 @@ Variables
   }
 
   .add-recipe {
-    background-color: var(--dark);
+    background-color: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: left;
+    border-bottom: 2px solid var(--primaryColor);
+    box-shadow: var(--lightShadow);
   }
 
   .add-btn{
-    margin: 0 auto;
     width: 500px;
-
-
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
-    color: var(--primaryColor);
+    color: #fff;
+    background:var(--primaryColor);
     border: 2px solid var(--primaryColor);
-    padding: 0.45rem 0.8rem;
+    padding: 1rem;
     display: inline-block;
     transition: var(--mainTransition);
     cursor: pointer;
     font-size: 0.8rem;
-    background: transparent;
     border-radius: var(--mainBorderRadius);
-    display: inline-block;
-    margin-top: 50px;
+    margin: 5rem 60rem;
   }
 
   button.remove {
@@ -738,11 +736,11 @@ Variables
     font-size: 2rem;
     padding: 4rem 2rem;
     font-weight: bold;
-    background-color: red;
+    background-color: var(--mainRed);
   }
   .alert-success {
     color: #fff;
-    background-color: green;
+    background-color: var(--primaryColor);
     font-size: 2rem;
     padding: 4rem 2rem;
     font-weight: bold;

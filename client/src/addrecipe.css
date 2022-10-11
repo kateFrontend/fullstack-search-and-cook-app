@@ -1,0 +1,144 @@
+ :root {
+    --light: #eee;
+    --dark: #342F4E;
+    --darker: #262336;
+    --blue: #61DAFB;
+    --crimson: #DB3052;
+  }
+  
+/*   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+  } */
+  
+
+  
+ .App {
+    color: var(--light);
+    text-align: center;
+    padding-top: 4rem;
+  }  
+  
+/*   h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+   */
+   .recipes {
+    display: grid;
+    max-width: 1024px;
+    margin: 2rem auto 0;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    
+  } 
+  
+  .recipe {
+    background-color: var(--offWhite);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: left;
+  } 
+  
+  button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--darker);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--primaryColor);
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: -0.5rem;
+  }
+  
+  .buttons button {
+    margin: 0 0.5rem;
+  }
+  
+  button.remove {
+    color: var(--offWhite);
+    background-color: var(primaryDarkColor);
+  }
+  
+  h4 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  li {
+    line-height: 1.4;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: left;
+  }
+  
+  .popup-inner {
+    background-color: var(--offWhite);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 480px;
+    overflow: auto;
+    max-height: calc(100vh - 4rem);
+    border-bottom: 2px solid var(--primaryColor);
+    box-shadow: var(--lightShadow);
+  }
+  
+  .popup h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    resize: vertical;
+    max-height: 200px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group button {
+    margin-top: 1rem;
+  }

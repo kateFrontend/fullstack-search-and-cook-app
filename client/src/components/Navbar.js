@@ -23,15 +23,15 @@ const Navbar = () => {
               <h2 className='logo'>Search&Cook</h2>
             </Link>
             <ul className='nav-links'>
-            <li>
+  {/*           <li>
                 <Link to='/addrecipe'>Add Recipe</Link>
-              </li>
-              <li>
+              </li> */}
+ {/*              <li>
                 <Link to='/search'>Search</Link>
-              </li>
-              <li>
+              </li> */}
+{/*               <li>
                 <Link to='/profile'>Profile</Link>
-              </li>
+              </li> */}
               <li>
 {/*                 <Link to='/login'>Login</Link> */}
                 <Container>

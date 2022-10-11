@@ -2,83 +2,52 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components'
 
-function AddRecipeForm() {
-/* 
-  const [formData, setFormData] = useState({
-    title:'',
-    description:'',
-    ingredients:'',
-    instructions:''
-  })
+const AddRecipeForm = (props) => {
 
-  const { title, description, ingredients, instructions } = formData; */
+const [name, setName] = useState('');
+const [description, setDescription] = useState('');
+const [ingredients, setIngredients] = useState('');
+const [instructions, setInstructions] = useState('');
+const [error, setError] = useState(null);
 
-/*   onchange()
 
-  onsubmit() */
+const { handleAdd } = props;
+
+/* const createRecipe = (e) => {
+ e.preventDefault()
+
+} */
+
+
 
   return (
-
     <>
     <div>
 
-<Form>
-
-{/*  add image  */}
-
+<Form /* onSubmit={createRecipe} */>
   <div>
-    <label for="title">Recipe Title:</label>
-    <input type="text" name="title" placeholder="Add a recipe name"/>
+    <label for="name">Recipe Title:</label>
+    <input type="text" name="name" placeholder="Add a recipe name" onChange={(e) => setName(e.target.value)}/>
   </div>
 
-
-{/*   <div>
-    <label for="addRecipeTitle">Recipe Image:</label>
-    <input type="text" name="recipeImage" placeholder="'http://..."/>
-  </div> */}
-
-{/* add description  */}
   <div class="form-group">
-    <label for="addRecipeDescription">Description:</label>
-    <textarea name="description" rows="3"></textarea>
+    <label for="description">Description:</label>
+    <textarea name="description" onChange={(e) => setDescription(e.target.value)}></textarea>
   </div>
 
 
-{/*  ingredients  */}
 <div>
-    <label for="lineForAddedIngredient">Ingredients:</label>
-{/*     <div>
-      <select id="addRecipeMeasurement">
-        <option>1/8</option>
-        <option>1/4</option>
-        <option>1/2</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-      <select id="addRecipeIngredientsID">
-        <option>Teaspoon</option>
-        <option>Tablespoon</option>
-        <option>Cup</option>
-        <option>Pinch</option>
-        <option>Dash</option>
-      </select>
-      <input type="input" id="ingredientInputBox" placeholder="'ie: butter'"/>
-      <input id="addIngredientBttn" type="submit" value="+"/>
-    </div>  */}
-    <textarea id="lineForAddedIngredient" name="ingredients" rows="3" readonly></textarea>      
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients" onChange={(e) => setIngredients(e.target.value)}></textarea>      
 </div>
 
   
-{/*  Instructions/Directions  */}
   <div class="form-group">
     <label for="instructions">Recipe Directions:</label>
-    <textarea name="instructions" rows="3"></textarea>
+    <textarea name="instructions" onChange={(e) => setInstructions(e.target.value)}></textarea>
   </div>
-{/*  Submit  */}
-  <input id="submitButtonAddRecipeFinal" type="submit" value="Submit This Recipe To Your Box!"/>
+
+  <input id="submit" type="submit" value="Submit This Recipe!" onClick={() => handleAdd(name, description, ingredients, instructions)}/>
 </Form>
 </div> 
     </>
@@ -90,7 +59,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 width: 450px;
-margin: 0 auto;
+margin: 10rem auto;
 `
 
 export default AddRecipeForm

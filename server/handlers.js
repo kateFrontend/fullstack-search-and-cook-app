@@ -51,6 +51,8 @@ const createRecipe = async (req, res) => {
         console.log("connected")
 
   const { name, description, ingredients, instructions } = req.body; 
+  console.log(name, description, ingredients, instructions)
+  console.log(req.body)
         
 
         const db = client.db("SeachAndCook");

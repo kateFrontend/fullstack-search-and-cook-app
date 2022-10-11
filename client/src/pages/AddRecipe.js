@@ -1,25 +1,17 @@
-import AddRecipeForm from "../components/AddRecipeForm";
+/* import React from 'react'
+import AddRecipeForm from '../components/AddRecipeForm'
 
-const AddRecipe = () => {
-    return(
-        <div>
-            <h1>Add new recipe here</h1>
-            <AddRecipeForm/>
-        </div>
-        
-    )
+function AddRecipe() {
+  return (
+    <div><AddRecipeForm/></div>
+  )
 }
 
-export default AddRecipe;
+export default AddRecipe
+ */
 
-
-
-
-
-
-
-
-/* import { db } from '../firebase.config'
+import { db } from '../firebase.config'
+import styled from 'styled-components'
 import '../addrecipe.css'
 import { useState, useEffect } from "react"
 import {
@@ -136,7 +128,7 @@ const AddRecipe = () => {
     
 
 return (
-    <section>
+    <Section>
       <h1 className='section-title'>My recipes</h1>
 
       <button className='add-btn' onClick={() => setPopupActive(!popupActive)}>Add recipe</button>
@@ -230,11 +222,15 @@ return (
           </form>
         </div>
       </div>}
-    </section>
+    </Section>
 
 )
 
 
-}
+} 
 
-export default AddRecipe; */
+const Section = styled.div`
+margin-top: 10rem;
+`
+
+export default AddRecipe
