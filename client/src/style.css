@@ -20,7 +20,7 @@ Variables
     --mainBorderRadius: 0.25rem;
     --smallWidth: 85vw;
     --maxWidth: 40rem;
-    --fullWidth: 1170px;
+    --fullWidth: 1500px;
   }
   /* 
   Global Styles 
@@ -39,6 +39,7 @@ Variables
     line-height: 1.4;
     font-size: 1rem;
     font-weight: 300;
+    background-image: url("motif3.jpg");
   }
   h1,
   h2,
@@ -49,6 +50,7 @@ Variables
     font-family: var(--slantedFont);
     margin-bottom: 1.25rem;
     letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor)
   }
   p {
     margin-bottom: 1rem;
@@ -172,14 +174,41 @@ Variables
   About
   */
   .about-section {
-    width: var(--smallWidth);
-    max-width: var(--maxWidth);
+    display:flex;
+    width: var(--fullWidth);
+    max-width: var(--fullWidth);
     margin: 0 auto;
   }
   .about-section p {
     line-height: 2rem;
     font-weight: 400;
     letter-spacing: 2px;
+  }
+
+  .about-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: left;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+  }
+
+  .about-title:hover{
+    transform: scale(1.1);
+    transition: var(--mainTransition);
+  }
+
+  .img-about{
+    border-radius:2rem;
+    width: 750px;
+    margin-left: 5rem;
+    box-shadow: var(--lightShadow)
+  }
+
+  .img-about:hover{
+    transform: scale(1.2);
+    transition: var(--mainTransition);
   }
   /* 
   Error
@@ -197,7 +226,7 @@ Variables
   */
   
   .section {
-    padding: 5rem 0;
+    padding: 10rem 0;
   }
   .section-title {
     font-size: 2rem;
