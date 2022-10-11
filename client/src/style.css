@@ -320,14 +320,13 @@ Variables
 
 
   .search {
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding-bottom: 0;
   }
   
   .search-form {
-    width: var(--smallWidth);
     margin: 0 auto;
-    max-width: var(--maxWidth);
+    max-width: var(--fullWidth);
     background: var(--mainWhite);
     padding: 2rem 2.5rem;
     text-transform: capitalize;
@@ -338,7 +337,8 @@ Variables
   .form-control label {
     display: block;
     margin-bottom: 1.25rem;
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 0.25rem;
     color: var(--primaryColor);
@@ -347,9 +347,9 @@ Variables
     width: 100%;
     border: none;
     border-color: transparent;
-    background: var(--mainBackground);
+    background: var(--mainGrey);
     border-radius: var(--mainBorderRadius);
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 1.2rem;
   }
 
