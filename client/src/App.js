@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { FormspreeProvider } from '@formspree/react';
 import Home from "./pages/Home";
 import Login from "./pages/Login"
 import Search from "./pages/Search";
@@ -13,10 +14,12 @@ import BuyAndCook from "./pages/BuyAndCook";
 import PrivateRoute from './pages/PrivateRoute';
 import AuthWrapper from "./pages/AuthWrapper";
 
+
 const App = () => {
 
   return(
     <AuthWrapper>
+      <FormspreeProvider project="{your-project-id}">
     <BrowserRouter>
       <Navbar/> 
         <Routes>
@@ -32,6 +35,7 @@ const App = () => {
         </Routes>
   {/*     <Footer/> */}
     </BrowserRouter>
+    </FormspreeProvider>
     </AuthWrapper>
   )
 }

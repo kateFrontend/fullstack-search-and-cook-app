@@ -1,0 +1,8 @@
+{
+    "forms": {
+      "contactForm": {
+        "name": "Contact Form",
+        "actions": [{ "type": "email", "to": "ecdanilova@gmail.com" }]
+      }
+    }
+  }

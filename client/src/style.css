@@ -129,6 +129,11 @@ Variables
     border-color: var(--primaryLightColor);
   }
 
+  .btn-contact{
+    padding: 1rem 5rem;
+    border-bottom: 2px solid var(--primaryColor);
+    box-shadow: var(--lightShadow);
+  }
   
 
   /* 
@@ -348,6 +353,76 @@ Variables
     font-size: 1.2rem;
   }
 
+
+  .contact-form{
+    width: var(--maxWidth);
+    margin-bottom: 5rem;
+  }
+
+  .contact-form label{
+    display: block;
+    margin: 1.5rem 0 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    color: var(--primaryColor);
+  }
+
+  .contact-form input {
+    border-radius: var(--mainBorderRadius);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
+    box-shadow: var(--lightShadow);
+  }
+
+  .contact-form textarea {
+    border-radius: var(--mainBorderRadius);
+    padding: 0.5rem;
+    height: 10rem;
+    font-size: 1.2rem;
+    border: 1px solid var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
+    box-shadow: var(--lightShadow);
+  }
+
+
+  .contact-img{
+    border-radius:2rem;
+    width: 750px;
+    margin-left: 10rem;
+    box-shadow: var(--lightShadow)
+  }
+
+  
+  .contact-img:hover{
+    transform: scale(1.2);
+    transition: var(--mainTransition);
+  }
+
+  .contact-section{
+    width: var(--fullWidth);
+    max-width: var(--fullWidth);
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .contact-title{
+    margin-left: 26rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: left;
+    margin-bottom: 3.5rem;
+    margin-top: 10rem;
+  }
+
+  .contact-title:hover{
+    transform: scale(1.1);
+    transition: var(--mainTransition);
+    cursor: pointer;
+  }
   /* 
   ====== 
   Recipe
