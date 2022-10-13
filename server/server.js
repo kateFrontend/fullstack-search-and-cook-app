@@ -1,11 +1,14 @@
+"use strict";
+
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
-
+const cors = require('cors');
 
 const { getRecipes, createRecipe, getRecipeById, deleteRecipe, updateRecipe } = require('./handlers')
 
 const port = 8000;
+
 
 express()
 
@@ -13,7 +16,7 @@ express()
     .use(express.json())
     .use(helmet())
     .use(morgan('tiny'))
-    
+
 
     .get("/hello", (req, res) => {
         res.status(200).json({ status: 200, message: "Hi!" })
@@ -24,6 +27,7 @@ express()
     .get("/api/addrecipe/:_id", getRecipeById)
     .delete("/api/addrecipe/:_id", deleteRecipe)
     .put("/api/addrecipe/:id", updateRecipe)
+    .options('/api/addrecipe', cors())
 
 
     .listen(8000, () => {

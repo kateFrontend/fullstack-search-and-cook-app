@@ -31,7 +31,7 @@ function instructionsInputHandler(e){
 }
 
 
-const createRecipeHandler = (e) => {
+const onCreateRecipe = (e) => {
   e.preventDefault();
   let recipe = {
     name: recipeName,
@@ -40,19 +40,41 @@ const createRecipeHandler = (e) => {
     instructions: recipeInstructions
   }
 
-  setName('');
+/*   setName('');
   setDescription('');
   setIngredients('');
-  setInstructions('');
+  setInstructions(''); */
 
-  console.log(recipe)
+ // console.log(recipe)
+/* props.onFetchRecipe(recipe); */
+
+props.onCreateRecipe(recipe)
+
 }
+
+/* function onFetchRecipe (recipe) {
+  fetch('http://localhost:8000/api/addrecipe/', {
+    method: 'POST',
+    body: JSON.stringify({
+      name: recipeName,
+      description: recipeDescription,
+      ingredients: recipeIngredients,
+      instructions: recipeInstructions
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+  .then((res) => {
+    console.log(res)
+  })
+ } */
 
   return (
     <>
     <div>
 
-<Form onSubmit={createRecipeHandler}>
+<Form onSubmit={onCreateRecipe}>
   <div>
     <label for="name">Recipe Title:</label>
     <input type="text" name="name" placeholder="Add a recipe name" value={recipeName} onChange={nameInputHandler}/>
@@ -75,7 +97,7 @@ const createRecipeHandler = (e) => {
     <textarea name="instructions" value={recipeInstructions} onChange={instructionsInputHandler}></textarea>
   </div>
 
-<Button type='submit'>Create Recipe</Button>
+<Button type='submit' onClick={onCreateRecipe}>Create Recipe</Button>
 <Button type='button' onClick={props.onCancel}>Cancel</Button>
 </Form>
 </div> 

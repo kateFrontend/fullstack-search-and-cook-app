@@ -15,13 +15,28 @@ function AddRecipe(props) {
   setShowForm(false);
  }
 
+function onFetchRecipe (recipe) {
+  fetch("http://localhost:8000/api/addrecipe/", {
+    method: 'POST',
+    body: JSON.stringify(recipe),
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+  .then((res) => {
+    console.log(res)
+  })
+  .catch((err) => {
+    console.log(err);
+})
+ } 
 
   return (
     <div>
       <Title>Create&Cook</Title>
       <SubTitle>Still in work!!!!!</SubTitle>
-      {!showForm && <Button onClick={onCreateNewRecipe}>Create Recipe</Button>}
-      {showForm && <AddRecipeForm addRecipe={onCreateNewRecipe} onCancel={onCancelNewRecipe} />}
+      {!showForm && <Button onClick={onCreateNewRecipe}>Create New Recipe</Button>}
+      {showForm && <AddRecipeForm addRecipe={onCreateNewRecipe} onCancel={onCancelNewRecipe} onCreateRecipe={onFetchRecipe} />}
       </div>
   )
 }
