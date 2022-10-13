@@ -51,7 +51,10 @@ const { handleAdd } = props;
     <textarea name="instructions" onChange={(e) => setInstructions(e.target.value)}></textarea>
   </div>
 
-  <input id="submit" type="submit" value="Submit This Recipe!" onClick={() => handleAdd(name, description, ingredients, instructions)}/>
+{/*   <input id="submit" type="submit" value="Submit This Recipe!" onClick={() => handleAdd(name, description, ingredients, instructions)}/> */}
+
+<Button type='submit'>Create Recipe</Button>
+<Button type='button' onClick={props.onCancel}>Cancel</Button>
 </Form>
 </div> 
     </>
@@ -64,6 +67,11 @@ flex-direction: column;
 justify-content: center;
 width: 450px;
 margin: 10rem auto;
+`
+
+const Button = styled.button`
+padding: 1rem 10rem;
+margin-top: 1rem;
 `
 
 export default AddRecipeForm

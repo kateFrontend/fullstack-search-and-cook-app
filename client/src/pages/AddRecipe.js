@@ -15,13 +15,17 @@ function AddRecipe(props) {
   setShowForm(true);
  }
 
+ function onCancelNewRecipe() {
+  setShowForm(false);
+ }
+
   return (
     <div>
       <Title>Create&Cook</Title>
 {/*       <Title>This section is not finished yet!Will be done in the few days!</Title> */}
 {/*       <AddRecipeForm/> */}
       {!showForm && <Button onClick={onCreateNewRecipe}>Create Recipe</Button>}
-      {showForm && <AddRecipeForm addRecipe={onCreateNewRecipe} />}
+      {showForm && <AddRecipeForm addRecipe={onCreateNewRecipe} onCancel={onCancelNewRecipe} />}
       </div>
   )
 }
