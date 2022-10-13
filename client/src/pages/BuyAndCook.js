@@ -75,7 +75,7 @@ function BuyAndCook() {
           <FormControl>
             <input
               type='text'
-              placeholder='e.g. eggs'
+              placeholder='what ingredients do you need to buy'
               value={name}
               onChange={(e) => setName(e.target.value)}
             />

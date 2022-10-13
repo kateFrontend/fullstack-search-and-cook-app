@@ -681,17 +681,19 @@ Variables
   } 
 
 
-/*   ///////////////////Alert */
+/* 
+Alert
+*/
 
   .alert {
     margin-bottom: 2rem;
     padding: 2rem;
-    height: 1.25rem;
+    height: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     border-radius: 0.25rem;
     letter-spacing: 0.1rem;
     text-transform: capitalize;
