@@ -1,5 +1,5 @@
-import RecipeList from "../components/RecipeList"
-import SearchForm from "../components/SearchForm"
+import RecipeList from "../components/search/RecipeList"
+import SearchForm from "../components/search/SearchForm"
 
 
 function Search() {

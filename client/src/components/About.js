@@ -1,5 +1,5 @@
 import { LoremIpsum } from "react-lorem-ipsum";
-import image from './family.jpg'
+import image from '../assets/family.jpg'
 
 const About = () => {
   return (

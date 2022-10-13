@@ -1,7 +1,7 @@
 import React from 'react'
 import Recipe from './Recipe'
-import Loading from './Loading'
-import { useGlobalContext } from '../context'
+import Loading from '../Loading'
+import { useGlobalContext } from '../../context'
 
 const RecipeList = () => {
   const { recipes, loading } = useGlobalContext();

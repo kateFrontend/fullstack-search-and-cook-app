@@ -1,5 +1,5 @@
 import React from 'react'
-import video from './food.mp4'
+import video from '../assets/food.mp4'
 
 function Video() {
   return (

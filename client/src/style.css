@@ -39,7 +39,7 @@ Variables
     line-height: 1.4;
     font-size: 1rem;
     font-weight: 300;
-    background-image: url("motif3.jpg");
+    background-image: url("./assets/motif3.jpg");
   }
   h1,
   h2,
@@ -469,66 +469,31 @@ Variables
       padding-top: 0;
     }
   }
-  .loader,
-  .loader:before,
-  .loader:after {
-    background: transparent;
-    -webkit-animation: load1 1s infinite ease-in-out;
-    animation: load1 1s infinite ease-in-out;
-    width: 1em;
-    height: 4em;
-  }
+
+  /* Loader */
+
   .loader {
-    color: var(--primaryColor);
-    text-indent: -9999em;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid var(--primaryColor);
     margin: 88px auto;
-    margin-top: 20rem;
-    position: relative;
-    font-size: 3rem;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s;
+    width: 320px;
+    height: 320px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
   }
-  .loader:before,
-  .loader:after {
-    position: absolute;
-    top: 0;
-    content: '';
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
   }
-  .loader:before {
-    left: -1.5em;
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
-  .loader:after {
-    left: 1.5em;
-  }
-  @-webkit-keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow: 0 0;
-      height: 4em;
-    }
-    40% {
-      box-shadow: 0 -2em;
-      height: 5em;
-    }
-  }
-  @keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow: 0 0;
-      height: 4em;
-    }
-    40% {
-      box-shadow: 0 -2em;
-      height: 5em;
-    }
-  }
+
 
   .App{
     padding-bottom: 50px;

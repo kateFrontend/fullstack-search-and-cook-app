@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import IngredientsList from '../components/IngredientsList';
+import IngredientsList from '../components/buy/IngredientsList';
 import Alert from '../components/Alert'
 import styled from 'styled-components';
 

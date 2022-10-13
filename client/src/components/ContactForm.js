@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import image from './cook.jpg'
+import image from '../assets/cook.jpg'
 
 export default () => {
   const [status, setStatus] = useState({
