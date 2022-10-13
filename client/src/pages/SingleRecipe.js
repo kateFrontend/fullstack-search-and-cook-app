@@ -83,14 +83,12 @@ if(!recipe) {
   } = recipe
   return (
     <section className='section recipe-section'>
-      <Link to='/search' className='btn btn-primary'>
-        back to search
-      </Link>
-      <h2 className='section-title'>{name}</h2>
       <div className='recipe-item'>
         <img src={image} alt={name}></img>
         <div className='recipe-info'>
-          <p>
+        <h2 className='recipe-title'>{name}</h2>
+        <div className='recipe-div'>
+        <p>
             <span className='recipe-item-data'>name :</span> {name}
           </p>
           <p>
@@ -99,6 +97,7 @@ if(!recipe) {
           <p>
             <span className='recipe-item-data'>cuisine :</span> {cuisine}
           </p>
+        </div>
           <p>
             <span className='recipe-item-data'>instructions :</span> {instructions}
           </p>
@@ -109,6 +108,9 @@ if(!recipe) {
             })}
           </p>
         </div>
+        <Link to='/search' className='btn btn-primary btn-recipe'>
+        back to search
+      </Link>
       </div>
     </section>
   )

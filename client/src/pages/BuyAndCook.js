@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import IngredientsList from '../components/buy/IngredientsList';
-import Alert from '../components/Alert'
+/* import Alert from '../components/Alert' */
 import styled from 'styled-components';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 const getLocalStorage = () => {
@@ -18,7 +20,8 @@ function BuyAndCook() {
     const [list, setList] = useState(getLocalStorage());
     const [isEditing, setIsEditing] = useState(false);
     const [editID, setEditID] = useState(null);
-    const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
+    //const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
+    const MySwal = withReactContent(Swal)
     const handleSubmit = (e) => {
       e.preventDefault();
       if (!name) {
@@ -46,14 +49,24 @@ function BuyAndCook() {
     };
   
     const showAlert = (show = false, type = '', msg = '') => {
-      setAlert({ show, type, msg });
+    //  setAlert({ show, type, msg });
     };
     const clearList = () => {
-      showAlert(true, 'danger', 'empty list');
+      //showAlert(true, 'danger', 'empty list');
+      MySwal.fire({
+        title: <strong>Good job!</strong>,
+        html: <i>Item removed!</i>,
+        icon: 'success'
+      })
       setList([]);
     };
     const removeItem = (id) => {
-      showAlert(true, 'danger', 'item removed');
+      //showAlert(true, 'danger', 'item removed');
+      MySwal.fire({
+        title: <strong>Good job!</strong>,
+        html: <i>Item removed!</i>,
+        icon: 'success'
+      })
       setList(list.filter((item) => item.id !== id));
     };
     const editItem = (id) => {
@@ -69,7 +82,11 @@ function BuyAndCook() {
     return (
       <Section>
         <BuyForm onSubmit={handleSubmit}>
-          {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
+          {alert.show &&       MySwal.fire({
+        title: <strong>Good job!</strong>,
+        html: <i>Item removed!</i>,
+        icon: 'success'
+      })}
   
           <h3>Buy&Cook</h3>
           <FormControl>

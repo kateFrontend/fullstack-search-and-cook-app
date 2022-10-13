@@ -59,7 +59,7 @@ align-items: center;
   border-radius: 0.25rem;
 }
 .btn:hover {
-  background: var(--primaryLightColor);
+  background: var(--primaryYellow);
   color: var(--primaryColor);
 }
 `;

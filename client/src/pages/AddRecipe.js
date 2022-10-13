@@ -19,6 +19,7 @@ function AddRecipe(props) {
   return (
     <div>
       <Title>Create&Cook</Title>
+      <SubTitle>Still in work!!!!!</SubTitle>
       {!showForm && <Button onClick={onCreateNewRecipe}>Create Recipe</Button>}
       {showForm && <AddRecipeForm addRecipe={onCreateNewRecipe} onCancel={onCancelNewRecipe} />}
       </div>
@@ -27,16 +28,16 @@ function AddRecipe(props) {
 
 
 
-
-
-
-
-
-
 const Title = styled.h1`
 display: flex;
 justify-content: center;
 margin-top: 10rem;
+`
+
+const SubTitle = styled.h1`
+display: flex;
+justify-content: center;
+margin-top: 5rem;
 `
 
 const Button = styled.button`
