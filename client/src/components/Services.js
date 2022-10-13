@@ -14,7 +14,7 @@ const Services = () => {
       <div className="element">
       <Link to='/search'>
         <FaSearch className='icons'/>
-        <h3 className="el-title">Search Recipes</h3>
+        <h3 className="el-title">Search&Cook</h3>
         </Link>
       </div>
 
@@ -28,7 +28,7 @@ const Services = () => {
       <div className="element">
       <Link to='/addrecipe'>
         <GiCookingPot className='icons big'/>
-        <h3 className="el-title">Add recipe</h3>
+        <h3 className="el-title">Create&Cook</h3>
         </Link>
       </div>
 
