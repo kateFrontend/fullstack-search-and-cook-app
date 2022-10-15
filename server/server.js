@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const cors = require('cors');
 
-const { getRecipes, createRecipe, getRecipeById, deleteRecipe, updateRecipe } = require('./handlers')
+const { getRecipes, createRecipe, getRecipeById, deleteRecipe, updateRecipe, getUser, createUser } = require('./handlers')
 
 const port = 8000;
 
@@ -27,6 +27,12 @@ express()
     .get("/api/addrecipe/:_id", getRecipeById)
     .delete("/api/addrecipe/:_id", deleteRecipe)
     .put("/api/addrecipe/:id", updateRecipe)
+
+    .get("/api/get-user", getUser)
+    .post("/api/create-user", createUser)
+
+
+
     .options('/api/addrecipe', cors())
 
 

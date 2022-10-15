@@ -15,6 +15,64 @@ const options = {
 };
 
 
+const getUser = async (req, res) => {
+    const client = new MongoClient(MONGO_URI, options);
+    try{
+        await client.connect();
+        console.log("connected")
+
+        const db = client.db("SeachAndCook");
+
+        const result = await db 
+        .collection("users").find({}).toArray();
+
+        result
+        ? res.status(200).json({ status: 200, result, message: "Success" })
+        : res.status(404).json({ status: 404, message: "Bad news" });
+    } catch (err){
+        res.status(500).json({ status: 500, data: req.body, message: err.message })
+    }
+    client.close();
+    console.log("disconnected!");  
+
+}
+
+//////////////////////////////////////////////////////////////
+
+const createUser = async (req, res) => {
+    const client = new MongoClient(MONGO_URI, options);
+
+    try{
+        await client.connect();
+        console.log("connected")
+
+  const { userId, name } = req.body; 
+//  console.log(id, name)
+  console.log(req.body)
+        
+        const db = client.db("SeachAndCook");
+
+        const _id = uuid();
+
+      const newUser = {
+            userId,
+            name,
+        }; 
+
+        const result = await db.collection("users").insertOne(newUser);
+
+        result
+        ? res.status(200).json({ status: 200, result, message: "Success" })
+        : res.status(404).json({ status: 404, message: "Bad news" });
+
+    } catch (err){
+        res.status(500).json({ status: 500, message: err.message });
+    }
+    client.close();
+    console.log("disconnected!");  
+}
+
+//////////////////////////////////////////////////////////////
 
 const getRecipes = async (req, res) => {
     const client = new MongoClient(MONGO_URI, options);
@@ -30,8 +88,8 @@ const getRecipes = async (req, res) => {
 
 
         result
-        ? res.status(200).json({ status: 200, result, message: "Succes" })
-        : res.status(404).json({ status: 400, message: "Bad news" });
+        ? res.status(200).json({ status: 200, result, message: "Success" })
+        : res.status(404).json({ status: 404, message: "Bad news" });
 
     } catch (err){
         res.status(500).json({ status: 500, data: req.body, message: err.message })
@@ -178,4 +236,4 @@ const updateRecipe = async (req, res) => {
 
 
 
-module.exports = { getRecipes, createRecipe, getRecipeById, deleteRecipe, updateRecipe };
+module.exports = { getRecipes, createRecipe, getRecipeById, deleteRecipe, updateRecipe, getUser, createUser };

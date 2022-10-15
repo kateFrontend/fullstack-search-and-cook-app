@@ -1,4 +1,5 @@
 const recipes = require("./data/data.json");
+const users = require('./data/dataUser.json')
 //console.log(recipes)
 
 const { MongoClient } = require("mongodb")
@@ -24,6 +25,9 @@ const batchImport = async (dbName) => {
 
         const result = await db.collection("recipes").insertMany(recipes);
         console.log(result)
+
+        const resultUser = await db.collection("users").insertMany(users);
+        console.log(resultUser)
 
        
     } catch (err) {

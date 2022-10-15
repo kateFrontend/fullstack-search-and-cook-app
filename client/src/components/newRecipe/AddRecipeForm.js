@@ -33,22 +33,22 @@ function instructionsInputHandler(e){
 
 const onCreateRecipe = (e) => {
   e.preventDefault();
-  let recipe = {
-    name: recipeName,
-    description: recipeDescription,
-    ingredients: recipeIngredients,
-    instructions: recipeInstructions
-  }
+    let recipe = {
+      name: recipeName,
+      description: recipeDescription,
+      ingredients: recipeIngredients,
+      instructions: recipeInstructions
+    }
 
-/*   setName('');
-  setDescription('');
-  setIngredients('');
-  setInstructions(''); */
+  /*   setName('');
+    setDescription('');
+    setIngredients('');
+    setInstructions(''); */
 
- // console.log(recipe)
-/* props.onFetchRecipe(recipe); */
+  // console.log(recipe)
+  /* props.onFetchRecipe(recipe); */
 
-props.onCreateRecipe(recipe)
+  props.onCreateRecipe(recipe)
 
 }
 
