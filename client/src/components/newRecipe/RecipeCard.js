@@ -46,12 +46,14 @@ border-radius: 2rem;
 border: 2px solid var(--primaryColor);
 border-bottom: 2px solid var(--primaryColor);
 box-shadow: var(--lightShadow);
+background: #fff;
 `
 
 const Card = styled.div`
 display: flex;
 flex-direction: column;
 padding: 30px;
+
 
 
 p {
@@ -87,7 +89,6 @@ button {
         color: var(--primaryColor);
     }
 }
-
 
 `
 

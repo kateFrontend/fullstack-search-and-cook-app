@@ -53,17 +53,26 @@ function AddRecipe(props) {
 
                 <div className="form-group">
                     <label htmlFor="description">Description:</label>
-                    <textarea name="description"></textarea>
+                    <textarea
+                        name="description"
+                        placeholder="Add a recipe description"
+                        ></textarea>
                 </div>
 
                 <div>
                     <label htmlFor="ingredients">Ingredients:</label>
-                    <textarea name="ingredients"></textarea>
+                    <textarea
+                        name="ingredients"
+                        placeholder="Add a recipe ingredients"
+                        ></textarea>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="instructions">Recipe Directions:</label>
-                    <textarea name="instructions"></textarea>
+                    <textarea
+                        name="instructions"
+                        placeholder="Add a recipe instructions"
+                        ></textarea>
                 </div>
                 <Button type="submit">Create Recipe</Button>
             </Form>
