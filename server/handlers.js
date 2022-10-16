@@ -44,7 +44,7 @@ const getUserByEmail = async (req, res) => {
     try {
         await client.connect()
         const db = client.db('SeachAndCook')
-        const { userEmail } = req.params;
+        const { userEmail } = req.params
         console.log(req.params)
 
         const result = await db
@@ -52,7 +52,9 @@ const getUserByEmail = async (req, res) => {
             .findOne({ userEmail: userEmail })
 
         result
-            ? res.status(200).json({ status: 200, data: result, message: 'Success' })
+            ? res
+                  .status(200)
+                  .json({ status: 200, data: result, message: 'Success' })
             : res.status(404).json({ status: 404, message: 'Bad news' })
     } catch (err) {
         console.log(err)
@@ -131,23 +133,20 @@ const createRecipe = async (req, res) => {
     try {
         await client.connect()
         console.log('connected')
-
-        const { name, description, ingredients, instructions } = req.body
-        console.log(name, description, ingredients, instructions)
-        console.log(req.body)
-
+        const { name, description, ingredients, instructions, userEmail } =
+            req.body
         const db = client.db('SeachAndCook')
-
         const _id = uuid()
+        console.log(req.body)
 
         const newRecipe = {
             _id,
-            name: name,
-            description: description,
-            ingredients: ingredients,
-            instructions: instructions,
+            name,
+            description,
+            ingredients,
+            instructions,
+            userEmail,
         }
-
         const result = await db.collection('recipes').insertOne(newRecipe)
 
         result
@@ -173,6 +172,48 @@ const getRecipeById = async (req, res) => {
         const { _id } = req.params
 
         const result = await db.collection('recipes').findOne({ _id })
+
+        result
+            ? res.status(200).json({ status: 200, result, message: 'Success' })
+            : res.status(400).json({ status: 400, message: 'Bad news' })
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({
+            status: 500,
+            data: req.body,
+            message: err.message,
+        })
+    } finally {
+        client.close()
+    }
+}
+
+//////////////////////////////////////////////////////////////////
+
+const getRecipesByUser = async (req, res) => {
+    const client = new MongoClient(MONGO_URI, options)
+
+    try {
+        await client.connect()
+        const db = client.db('SeachAndCook')
+        const { email } = req.params
+        console.log(req.params)
+
+        const query = { userEmail: email }
+        const options = {
+            projection: {
+                _id: 1,
+                name: 1,
+                description: 1,
+                ingredients: 1,
+                instructions: 1,
+            },
+        }
+
+        const result = await db
+            .collection('recipes')
+            .find(query, options)
+            .toArray()
 
         result
             ? res.status(200).json({ status: 200, result, message: 'Success' })
@@ -218,21 +259,24 @@ const deleteRecipe = async (req, res) => {
 
 const updateRecipe = async (req, res) => {
     const client = new MongoClient(MONGO_URI, options)
-
-    const { _id } = req.params
+    const { id } = req.params
 
     try {
         await client.connect()
         const db = client.db('SeachAndCook')
-        const { name, description, ingredients, instructions } = req.body
-        const query = { _id }
+        const { userEmail, name, description, ingredients, instructions } = req
+        const query = { id }
+
+        console.log(req.params)
 
         let newValues = {
             $set: {
+                _id: id,
                 name: name,
                 description: description,
                 ingredients: ingredients,
                 instructions: instructions,
+                userEmail: userEmail,
             },
         }
 
@@ -273,4 +317,5 @@ module.exports = {
     getUsers,
     getUserByEmail,
     createUser,
+    getRecipesByUser,
 }

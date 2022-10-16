@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import BuyAndCook from './pages/BuyAndCook'
 import PrivateRoute from './pages/PrivateRoute'
 import AuthWrapper from './pages/AuthWrapper'
+import UpdateRecipe from './components/newRecipe/UpdateRecipe'
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                         <Route path="login" element={<Login />} />
                         <Route path="buy" element={<BuyAndCook />} />
                         <Route path="addrecipe" element={<AddRecipev2 />} />
+                        <Route path="update/:id" element={<UpdateRecipe />} />
                         <Route path="*" element={<Error />} />
                     </Routes>
                 </BrowserRouter>

@@ -1,34 +1,39 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-
 import AddRecipeForm from '../components/newRecipe/AddRecipeForm'
-import {
-    createFetchRecipe,
-    getRecipeById,
-    getRecipes,
-} from '../api/common.service'
+import { useAuth0 } from '@auth0/auth0-react'
+import { createRecipe, getRecipeById, getRecipes } from '../api/common.service'
+import { getRecipesByUser } from '../api/common.service'
+import ListRecipes from '../components/newRecipe/ListRecipes'
 import styled from 'styled-components'
 
 function AddRecipe(props) {
     const [data, setData] = useState([])
+    const [formData, setFormData] = useState([])
+    const { user } = useAuth0()
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/addrecipe', {
-            mode: 'cors',
-        })
-            .then((res) => res.json())
-            .then((data) => console.log(data))
-    }, [])
+        getRecipesByUser(user.email)
+            .then((res) => setData(res.data.result))
+            .catch((e) => console.error(e))
+    }, [user])
 
     const handleCreateRecipe = (e) => {
         e.preventDefault()
         const { name, description, ingredients, instructions } = e.target
-        createFetchRecipe({
+        console.log(formData)
+
+        createRecipe({
+            userEmail: user.email,
             name: name.value,
             description: description.value,
             ingredients: ingredients.value,
             instructions: instructions.value,
         })
+            .then(() => {
+                e.target.reset()
+            })
+            .catch((e) => console.error(e))
     }
 
     return (
@@ -59,10 +64,9 @@ function AddRecipe(props) {
                     <label htmlFor="instructions">Recipe Directions:</label>
                     <textarea name="instructions"></textarea>
                 </div>
-
                 <Button type="submit">Create Recipe</Button>
-                <Button type="button">Cancel</Button>
             </form>
+            <div>{<ListRecipes data={data} />}</div>
         </div>
     )
 }

@@ -14,6 +14,7 @@ const {
     getUsers,
     createUser,
     getUserByEmail,
+    getRecipesByUser,
 } = require('./handlers')
 
 const port = 8000
@@ -31,6 +32,7 @@ express()
     .get('/api/addrecipe', getRecipes)
     .post('/api/addrecipe', createRecipe)
     .get('/api/addrecipe/:_id', getRecipeById)
+    .get('/api/user-recipes/:email', getRecipesByUser)
     .delete('/api/addrecipe/:_id', deleteRecipe)
     .put('/api/addrecipe/:id', updateRecipe)
 
@@ -39,6 +41,9 @@ express()
     .post('/api/create-user', createUser)
 
     .options('/api/addrecipe', cors())
+    .options('/api/addrecipe/:id', cors())
+    .options('/api/user-recipes', cors())
+
     .options('/api/get-users', cors())
     .options('/api/get-user', cors())
     .options('/api/create-user', cors())

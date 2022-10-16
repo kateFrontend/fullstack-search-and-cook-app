@@ -26,7 +26,7 @@ const Navbar = () => {
                             .then((res) => console.log(res))
                             .catch((e) => console.error(e))
                     } else {
-                        console.error('User not found')
+                        console.log('User not found')
                     }
                 })
                 .catch((e) => console.error(e))
