@@ -66,7 +66,7 @@ function AddRecipe(props) {
                 </div>
                 <Button type="submit">Create Recipe</Button>
             </form>
-            <div>{<ListRecipes data={data} />}</div>
+            <List>{<ListRecipes data={data} />}</List>
         </div>
     )
 }
@@ -89,6 +89,13 @@ const Button = styled.button`
     align-items: center;
     margin: 10rem auto;
     padding: 2rem 10rem;
+`
+
+const List = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 5rem;
 `
 
 export default AddRecipe
