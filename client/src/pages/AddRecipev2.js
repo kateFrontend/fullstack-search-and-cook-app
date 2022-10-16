@@ -39,8 +39,8 @@ function AddRecipe(props) {
     return (
         <div>
             <Title>Create&Cook</Title>
-            <SubTitle>Still in work!!!!!</SubTitle>
-            <form onSubmit={handleCreateRecipe}>
+{/*             <SubTitle>Still in work!!!!!</SubTitle>
+ */}            <Form onSubmit={handleCreateRecipe}>
                 <div>
                     <label htmlFor="name">Recipe Title:</label>
                     <input
@@ -65,7 +65,7 @@ function AddRecipe(props) {
                     <textarea name="instructions"></textarea>
                 </div>
                 <Button type="submit">Create Recipe</Button>
-            </form>
+            </Form>
             <List>{<ListRecipes data={data} />}</List>
         </div>
     )
@@ -87,8 +87,18 @@ const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10rem auto;
-    padding: 2rem 10rem;
+    margin: 2rem auto;
+    padding: 1rem 10rem;
+`
+
+const Form = styled.form`
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+
 `
 
 const List = styled.div`
