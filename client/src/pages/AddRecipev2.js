@@ -56,7 +56,7 @@ function AddRecipe(props) {
                     <textarea
                         name="description"
                         placeholder="Add a recipe description"
-                        ></textarea>
+                    ></textarea>
                 </div>
 
                 <div>
@@ -64,7 +64,7 @@ function AddRecipe(props) {
                     <textarea
                         name="ingredients"
                         placeholder="Add a recipe ingredients"
-                        ></textarea>
+                    ></textarea>
                 </div>
 
                 <div className="form-group">
@@ -72,7 +72,7 @@ function AddRecipe(props) {
                     <textarea
                         name="instructions"
                         placeholder="Add a recipe instructions"
-                        ></textarea>
+                    ></textarea>
                 </div>
                 <Button type="submit">Create Recipe</Button>
             </Form>
@@ -148,7 +148,6 @@ const Form = styled.form`
         border-bottom: 2px solid var(--primaryColor);
         box-shadow: var(--lightShadow);
     }
-
 `
 
 const List = styled.div`

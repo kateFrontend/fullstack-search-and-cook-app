@@ -23,9 +23,18 @@ function RecipeCard(props) {
         <Wrapper>
             <Card key={key}>
                 <h2>{name}</h2>
-                <p><span>Description: </span>{description}</p>
-                <p><span>Ingredients: </span>{ingredients}</p>
-                <p><span>Instructions: </span>{instructions}</p>
+                <p>
+                    <span>Description: </span>
+                    {description}
+                </p>
+                <p>
+                    <span>Ingredients: </span>
+                    {ingredients}
+                </p>
+                <p>
+                    <span>Instructions: </span>
+                    {instructions}
+                </p>
             </Card>
             <Buttons>
                 <button onClick={() => navigate(`/update/${_id}`)}>Edit</button>
@@ -35,61 +44,56 @@ function RecipeCard(props) {
     )
 }
 
-
 const Wrapper = styled.div`
-width: 650px;
-border:  2px solid black;
-display: flex;
-flex-direction: column;
-margin: 2rem 0;
-border-radius: 2rem;
-border: 2px solid var(--primaryColor);
-border-bottom: 2px solid var(--primaryColor);
-box-shadow: var(--lightShadow);
-background: #fff;
+    width: 650px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    border-radius: 2rem;
+    border: 2px solid var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
+    box-shadow: var(--lightShadow);
+    background: #fff;
 `
 
 const Card = styled.div`
-display: flex;
-flex-direction: column;
-padding: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
 
+    p {
+        font-size: 1.1rem;
+    }
 
-
-p {
-    font-size: 1.1rem;
-}
-
-p span {
-    color: var(--primaryColor);
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: underline;
-}
+    p span {
+        color: var(--primaryColor);
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
 `
 
 const Buttons = styled.div`
-width: 300px;
-margin: 50px 30px;
-display: flex;
-justify-content: space-between;
+    width: 300px;
+    margin: 50px 30px;
+    display: flex;
+    justify-content: space-between;
 
-
-button {
-    padding: 7px 50px;
-    background: var(--primaryColor);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: all 0.3s linear;
-    &:hover{
-        background: var(--primaryYellow);
-        color: var(--primaryColor);
+    button {
+        padding: 7px 50px;
+        background: var(--primaryColor);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: all 0.3s linear;
+        &:hover {
+            background: var(--primaryYellow);
+            color: var(--primaryColor);
+        }
     }
-}
-
 `
 
 export default RecipeCard
