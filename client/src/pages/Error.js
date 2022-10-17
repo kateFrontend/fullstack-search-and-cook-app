@@ -7,7 +7,7 @@ const Error = () => {
         <section className="error-page section">
             <div className="error-container">
                 <Img src={image} alt="error" />
-                <h1>oops! nothing interesting here!</h1>
+                <h1> nothing interesting here!</h1>
                 <Link to="/" className="btn btn-primary">
                     back home
                 </Link>

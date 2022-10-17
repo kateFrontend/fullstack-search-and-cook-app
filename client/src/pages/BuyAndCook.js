@@ -3,6 +3,7 @@ import IngredientsList from '../components/buy/IngredientsList'
 import styled from 'styled-components'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { FaCheckSquare } from 'react-icons/fa'
 
 const getLocalStorage = () => {
     let list = localStorage.getItem('list')
@@ -45,11 +46,6 @@ function BuyAndCook() {
                 icon: 'success',
             })
         } else {
-            MySwal.fire({
-                title: <strong>Good job!</strong>,
-                html: <i>item added to the list!</i>,
-                icon: 'success',
-            })
             const newItem = { id: new Date().getTime().toString(), title: name }
 
             setList([...list, newItem])
@@ -66,8 +62,7 @@ function BuyAndCook() {
     }
     const removeItem = (id) => {
         MySwal.fire({
-            title: <strong>Good job!</strong>,
-            html: <i>Item removed!</i>,
+            title: <strong>Item removed!</strong>,
             icon: 'error',
         })
         setList(list.filter((item) => item.id !== id))
@@ -87,8 +82,7 @@ function BuyAndCook() {
             <BuyForm onSubmit={handleSubmit}>
                 {alert.show &&
                     MySwal.fire({
-                        title: <strong>Good job!</strong>,
-                        html: <i>Item removed!</i>,
+                        title: <strong>Item removed!</strong>,
                         icon: 'error',
                     })}
 
@@ -96,12 +90,12 @@ function BuyAndCook() {
                 <FormControl>
                     <input
                         type="text"
-                        placeholder="what ingredients do you need to buy"
+                        placeholder="what ingredients do you need to buy, ex.: tomatoes"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
                     <SubmitButton type="submit">
-                        {isEditing ? 'edit' : 'submit'}
+                        <FaCheckSquare />
                     </SubmitButton>
                 </FormControl>
             </BuyForm>
@@ -151,29 +145,27 @@ const FormControl = styled.div`
 
     input {
         padding: 1rem;
-        border: transparent;
         border-radius: 0.5rem;
         background: #f3f3f3;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        height: 4rem;
+        border: 1px solid var(--primaryColor);
     }
 `
 
 const SubmitButton = styled.button`
-    margin-left: 1rem;
-    background: var(--primaryColor);
-    color: white;
+    margin-left: 2rem;
+    color: var(--primaryColor);
     border: none;
-    flex: 0 0 10rem;
-    display: grid;
-    align-items: center;
-    text-transform: capitalize;
-    letter-spacing: 2px;
     border-radius: 0.5rem;
+    background: #fff;
+    padding: 0;
     cursor: pointer;
-    content: var(--primaryColor);
     transition: all 0.3s linear;
-    font-size: 1.2rem;
-    font-size: bold;
+    font-size: 4rem;
+    &:hover {
+        color: var(--primaryYellow);
+    }
 `
 
 const Container = styled.div`
@@ -196,6 +188,7 @@ const ClearButton = styled.button`
     font-size: 0.85rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
+    border: none;
     transition: all 0.3s linear;
     margin-top: 1.25rem;
     font-size: 1.2rem;

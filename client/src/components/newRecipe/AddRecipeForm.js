@@ -37,34 +37,8 @@ const AddRecipeForm = (props) => {
             instructions: recipeInstructions,
         }
 
-        /*   setName('');
-    setDescription('');
-    setIngredients('');
-    setInstructions(''); */
-
-        // console.log(recipe)
-        /* props.onFetchRecipe(recipe); */
-
         props.onCreateRecipe(recipe)
     }
-
-    /* function onFetchRecipe (recipe) {
-  fetch('http://localhost:8000/api/addrecipe/', {
-    method: 'POST',
-    body: JSON.stringify({
-      name: recipeName,
-      description: recipeDescription,
-      ingredients: recipeIngredients,
-      instructions: recipeInstructions
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    }
-  })
-  .then((res) => {
-    console.log(res)
-  })
- } */
 
     return (
         <>
@@ -78,6 +52,7 @@ const AddRecipeForm = (props) => {
                             placeholder="Add a recipe name"
                             value={recipeName}
                             onChange={nameInputHandler}
+                            required
                         />
                     </div>
 
@@ -111,9 +86,6 @@ const AddRecipeForm = (props) => {
 
                     <Button type="submit" onClick={onCreateRecipe}>
                         Create Recipe
-                    </Button>
-                    <Button type="button" onClick={props.onCancel}>
-                        Cancel
                     </Button>
                 </Form>
             </div>

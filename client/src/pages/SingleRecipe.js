@@ -73,7 +73,6 @@ const SingleRecipe = () => {
     }
     if (!recipe) {
         return
-        ;<h2 className="section-title">no recipes to display</h2>
     } else {
         const { name, image, category, cuisine, instructions, ingredients } =
             recipe
@@ -128,5 +127,3 @@ const SingleRecipe = () => {
 }
 
 export default SingleRecipe
-
-//const url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
