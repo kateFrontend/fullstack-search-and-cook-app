@@ -1,7 +1,7 @@
 # SearchAndCook
 Search&Cook - is a full-stack web application for finding recipes. After loggin user can search recipes, take notes on which ingredients it needs to buy and add your own recipes. 
 
-<img src="../SearchAndCookVS2/client/src/assets/SearchAndCook.jpg" alt="Image" width="auto">
+<img src="./SearchAndCook.jpg" alt="Image" width="auto">
 
 ## Built with
 - ### Frontend
